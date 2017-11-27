@@ -41,7 +41,7 @@ module.exports = {
   },
 
   output: {
-    filename: 'demo/bundle.js'
+    filename: './demo/bundle.js'
   },
 
   plugins: [

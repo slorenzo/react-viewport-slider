@@ -17,7 +17,7 @@ module.exports = {
   },
 
   output: {
-    filename: 'dist/react-viewport-slider.js',
+    filename: './dist/react-viewport-slider.js',
     libraryTarget: 'umd',
     library: 'ViewportSlider'
   }

@@ -7,7 +7,7 @@
     "bundle-demo": "webpack --config webpack.config.demo.js",
     "bundle-dist": "webpack --config webpack.config.dist.js",
     "bundle-page": "webpack --config webpack.config.page.js",
-    "bundle-modules": "rm -rf dist/modules/* --force && babel src --loose --out-dir dist/modules",
+    "bundle-modules": "rm -rf ./dist/modules/* --force && babel src --loose --out-dir ./dist/modules",
     "bundle": "npm run bundle-demo && npm run bundle-dist && npm run bundle-modules",
     "start": "webpack-dev-server --config webpack.config.demo.js",
     "lint": "eslint ./src",
