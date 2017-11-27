@@ -68,7 +68,10 @@ export default class Slider extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { 
+      children,
+      paginator
+    } = this.props;
     const { activeIndex } = this.state;
 
     if (!children) {
@@ -77,11 +80,12 @@ export default class Slider extends Component {
 
     return (
       <div className="viewport-slider">
-        <Paginator
+        { paginator && <Paginator
           activeIndex={activeIndex}
           bullets={children.length}
           onClick={this.setActive}
         />
+      }
 
         {children.map((child, key) => {
           let index = key + 1;
@@ -101,11 +105,16 @@ export default class Slider extends Component {
   }
 }
 
+Slider.defaultProps = {
+  paginator: true
+};
+
 Slider.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ])
+  ]),
+  paginator: PropTypes.bool
 };
 
 Slider.Item = Item;
