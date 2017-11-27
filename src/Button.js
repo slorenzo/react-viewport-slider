@@ -19,7 +19,6 @@ const Button = ({ children, index, onClick }) => {
 
   return (
     <a
-      href={`#viewport-slide-${index + 1}`}
       className="viewport-slider-button"
       onClick={handleClick}
       style={style}
