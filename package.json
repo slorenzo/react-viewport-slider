@@ -39,7 +39,7 @@
   "dependencies": {
     "classnames": "2.2.5",
     "prop-types": "15.6.0",
-    "scroll-to-y": "git://github.com/daviferreira/scroll-to-y.git"
+    "scroll-to-y": "1.0.1"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
