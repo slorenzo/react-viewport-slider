@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import React from 'react';
 import classNames from 'classnames';
+import Responsive from 'react-responsive';
 
 import Button from './Button';
 
@@ -42,14 +43,42 @@ const Item = props => {
     );
   };
 
+  const Desktop = props => <Responsive {...props} minWidth={992} />;
+  const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
+  const Mobile = props => <Responsive {...props} maxWidth={767} />;
+
   return (
-    <div
-      {...propsClone}
-      className={classes}
-      style={Object.assign(itemStyle, style)}
-    >
-      {children}
-      {hideButton ? null : renderButton()}
+    <div>
+      <Desktop>
+        <div
+          {...propsClone}
+          className={classes}
+          style={Object.assign(itemStyle, style.desktop)}
+        >
+          {children}
+          {hideButton ? null : renderButton()}
+        </div>
+      </Desktop>
+      <Tablet>
+        <div
+          {...propsClone}
+          className={classes}
+          style={Object.assign(itemStyle, style.tablet)}
+        >
+          {children}
+          {hideButton ? null : renderButton()}
+        </div>
+      </Tablet>
+      <Mobile>
+        <div
+          {...propsClone}
+          className={classes}
+          style={Object.assign(itemStyle, style.mobile)}
+        >
+          {children}
+          {hideButton ? null : renderButton()}
+        </div>
+      </Mobile>
     </div>
   );
 };
