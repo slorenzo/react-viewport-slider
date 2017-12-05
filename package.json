@@ -39,6 +39,7 @@
   "dependencies": {
     "classnames": "2.2.5",
     "prop-types": "15.6.0",
+    "react-responsive": "^4.0.3",
     "scroll-to-y": "1.0.1"
   },
   "devDependencies": {
