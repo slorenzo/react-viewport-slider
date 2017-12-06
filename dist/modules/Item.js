@@ -18,10 +18,6 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _reactResponsive = require('react-responsive');
-
-var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
-
 var _Button = require('./Button');
 
 var _Button2 = _interopRequireDefault(_Button);
@@ -58,58 +54,14 @@ var Item = function Item(props) {
     );
   };
 
-  var Desktop = function Desktop(props) {
-    return _react2.default.createElement(_reactResponsive2.default, _extends({}, props, { minWidth: 992 }));
-  };
-  var Tablet = function Tablet(props) {
-    return _react2.default.createElement(_reactResponsive2.default, _extends({}, props, { minWidth: 768, maxWidth: 991 }));
-  };
-  var Mobile = function Mobile(props) {
-    return _react2.default.createElement(_reactResponsive2.default, _extends({}, props, { maxWidth: 767 }));
-  };
-
   return _react2.default.createElement(
     'div',
-    null,
-    _react2.default.createElement(
-      Desktop,
-      null,
-      _react2.default.createElement(
-        'div',
-        _extends({}, propsClone, {
-          className: classes,
-          style: Object.assign(itemStyle, style.desktop)
-        }),
-        children,
-        hideButton ? null : renderButton()
-      )
-    ),
-    _react2.default.createElement(
-      Tablet,
-      null,
-      _react2.default.createElement(
-        'div',
-        _extends({}, propsClone, {
-          className: classes,
-          style: Object.assign(itemStyle, style.tablet)
-        }),
-        children,
-        hideButton ? null : renderButton()
-      )
-    ),
-    _react2.default.createElement(
-      Mobile,
-      null,
-      _react2.default.createElement(
-        'div',
-        _extends({}, propsClone, {
-          className: classes,
-          style: Object.assign(itemStyle, style.mobile)
-        }),
-        children,
-        hideButton ? null : renderButton()
-      )
-    )
+    _extends({}, propsClone, {
+      className: classes,
+      style: Object.assign(itemStyle, style.desktop)
+    }),
+    children,
+    hideButton ? null : renderButton()
   );
 };
 
